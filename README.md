@@ -16,21 +16,21 @@ Style the users list with bootstrap in the `resources/views/home.blade.php` blad
 
 #### Ticket #4
 
-4.a Run the available migration (which creates a users table)
+4.a) Run the available migration (which creates a users table)
 
-4.b Have a look at the `User` Model and fix any bug that you can find
+4.b) Have a look at the `User` Model and fix any bug that you can find
 
-4.c In the `UserController`, move the users data to the database 
+4.c) In the `UserController`, move the users data to the database 
 
-4.d In the `UserController`, update the index method to fetch the data from database before injecting it into the template
+4.d) In the `UserController`, update the index method to fetch the data from database before injecting it into the template
 
-4.e Use pagination to limit the users displayed to 5 and add the pagination at the bottom of the list
+4.e) Use pagination to limit the users displayed to 5 and add the pagination at the bottom of the list
 
 #### Ticket #5
 
-5.a Create a new page to display a single user
+5.a) Create a new page to display a single user
 
-5.b Add a hyperlink on each user on the users list that navigates to the page you created above
+5.b) Add a hyperlink on each user on the users list that navigates to the page you created above
 
 
 
