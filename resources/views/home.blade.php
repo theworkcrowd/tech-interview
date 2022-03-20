@@ -2,16 +2,43 @@
 
 @section('content')
 <div class="container">
-  <div class="row justify-content-center">
+  <div class="row">
+  
+  
+
+  
     <ul>
       @foreach ($users as $user)
-        <li>
-          <img src="{{$user['avatar']}}" style="width:60px" alt="" />
-          {{$user['first_name']}}
-          {{$user['last_name']}}
-        </li>
+        
+        <div class="section"> 
+          <div class="card" style="width: 18rem;"> 
+          
+           <img src="{{$user['avatar']}}" class="card-img-top" alt="" />
+          <div class="card-body">
+           <h5> {{$user['first_name']}}</h5>
+           <h5> {{$user['last_name']}}</h5>
+           <a href="details" class="btn btn-primary">More Info</a>
+           </div>
+          </div>
+         </div>
+       
+        
       @endforeach
-    </ul>
+     </ul>
+    
   </div>
+
 </div>
+<span>{{$users->links()}}</span>
+
+<style>
+  .w-5{
+    display: none;
+  }
+
+ 
+</style>
+
+
+
 @endsection

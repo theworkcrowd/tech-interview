@@ -1,8 +1,40 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
+//functions
+ @import '~bootstrap/scss/functions';
+
 // Variables
 @import 'variables';
+@import '~bootstrap/scss/variables';
+
+//Utilities
+@import '~bootstrap/scss/utilities';
+
+
+
+
+.yellow {
+    color: $yellow-300;
+  
+}
+
+.ul{
+
+    list-style: none;
+}
+
+
+
+
+
+
+
+
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+
+ 
+
