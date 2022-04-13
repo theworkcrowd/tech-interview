@@ -10,33 +10,9 @@
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-lg-10 mx-auto">
                 <div class="career-search mb-60">
-
-                    <form action="#" class="career-form mb-60">
-                        <div class="row">
-                            <div class="col-md-6 col-lg-4 my-3">
-                                <div class="input-group position-relative">
-                                    <input type="text" class="form-control" placeholder="Search By Firstname"
-                                        id="keywords">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-4 my-3">
-                                <div class="input-group position-relative">
-                                    <input type="text" class="form-control" placeholder="Search By Lastname"
-                                        id="keywords">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-3 my-3">
-                                <button type="button" class="btn btn-lg btn-block btn-light btn-custom" id="contact-submit">
-                                    Search
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
                     <div class="filter-result">
                         <p class="mb-30 ff-montserrat"></p>
                         @foreach ($users as $user)
@@ -51,13 +27,17 @@
                                     </div>
                                 </div>
                                 <div class="job-right my-4 flex-shrink-0">
-                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light">View User Details</a>
+                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light" {{-- onclick="window.location='{{ url('users/index') }}'">View User Details</a> --}}
+                                        </div>
                                 </div>
-                            </div>
                         @endforeach
                     </div>
+                    <div class="d-flex justify-content-center">{{ $users->links('pagination::bootstrap-4') }}</div>
                 </div>
             </div>
+
+
+
         </div>
 
     </div>
