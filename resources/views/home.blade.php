@@ -27,7 +27,10 @@
                                     </div>
                                 </div>
                                 <div class="job-right my-4 flex-shrink-0">
-                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light"> View User Details</a>
+                                    <a class="btn d-block w-100 d-sm-inline-block btn-light"
+                                        href="{{ route('viewuser', $user['id']) }}">
+                                        View User Details
+                                    </a>
                                 </div>
                             </div>
                         @endforeach
