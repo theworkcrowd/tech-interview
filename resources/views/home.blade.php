@@ -27,9 +27,9 @@
                                     </div>
                                 </div>
                                 <div class="job-right my-4 flex-shrink-0">
-                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light" {{-- onclick="window.location='{{ url('users/index') }}'">View User Details</a> --}}
-                                        </div>
+                                    <a href="#" class="btn d-block w-100 d-sm-inline-block btn-light"> View User Details</a>
                                 </div>
+                            </div>
                         @endforeach
                     </div>
                     <div class="d-flex justify-content-center">{{ $users->links('pagination::bootstrap-4') }}</div>
