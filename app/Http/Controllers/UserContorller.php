@@ -90,4 +90,9 @@ class UserContorller extends Controller
       ]);
     }
   }
+
+  public function getUser($id){
+    $user = User::find($id);
+    return view('user.single', compact('user'));
+  }
 }

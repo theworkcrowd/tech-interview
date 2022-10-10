@@ -32,6 +32,9 @@
                     {{ Carbon\Carbon::parse($user->created_at)->diffForHumans()  }}
                   @endif
                 </td>
+                <td>
+                  <a href="{{ url('get/user/'.$user->id) }}" class="btn btn-info">View User</a>
+                </td>
               </tr>
             @endforeach
             </tbody>
