@@ -2,12 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use illuminate\Support\Carbon;
 
 class UserContorller extends Controller
 {
   public function index()
   {
+    $users = User::latest()->paginate(5);
+    return view('home', compact('users'));
+  }
+
+  public function storeUsers()
+  {
+    /**
+     * Grab the users array
+     */
+
     $users = [
       [
         'first_name' => 'Leonel',
@@ -66,6 +78,16 @@ class UserContorller extends Controller
       ]
     ];
 
-    return view('home', compact('users'));
+    /**
+     * Add users to the db using the model
+     */
+    foreach ($users as $user) {
+      User::insert([
+        'first_name' => $user['first_name'],
+        'last_name' => $user['last_name'],
+        'avatar' => $user['avatar'],
+        'created_at' => Carbon::now()
+      ]);
+    }
   }
 }
